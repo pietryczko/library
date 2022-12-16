@@ -30,16 +30,6 @@ public class Rent {
         this.id = id;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "READER_ID")
-    public User getReader() {
-        return user;
-    }
-
-    public void setReader(User user) {
-        this.user = user;
-    }
-
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "COPY_ID")
     public Copy getCopy() {
@@ -60,7 +50,6 @@ public class Rent {
         this.rentalDate = rentalDate;
     }
 
-    @NotNull
     @Column(name = ("RETURN_DATE"))
     public Date getReturnDate() {
         return returnDate;
@@ -68,5 +57,15 @@ public class Rent {
 
     public void setReturnDate(Date returnDate) {
         this.returnDate = returnDate;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "USER_ID")
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

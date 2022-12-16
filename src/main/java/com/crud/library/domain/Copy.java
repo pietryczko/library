@@ -8,7 +8,6 @@ import javax.persistence.*;
 @Table(name = "COPIES")
 public class Copy {
     private int id;
-    private int titleId;
     private String status;
     private Title title;
 
@@ -30,16 +29,6 @@ public class Copy {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    @ManyToOne()
-    @JoinColumn(name = "TITLE_ID")
-    public int getTitleId() {
-        return titleId;
-    }
-
-    public void setTitleId(int titleId) {
-        this.titleId = titleId;
     }
 
     @NotNull
