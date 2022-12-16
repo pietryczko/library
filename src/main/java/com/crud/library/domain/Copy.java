@@ -1,25 +1,29 @@
 package com.crud.library.domain;
 
 import com.sun.istack.NotNull;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name = "COPIES")
 public class Copy {
     private int id;
     private int titleId;
     private String status;
+    private Title title;
 
-    @Entity
-    @Table(name = "COPIES")
+
     public Copy(String status) {
         this.status = status;
+    }
+
+    public Copy() {
     }
 
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name ="ID", unique = true)
+    @Column(name = "ID", unique = true)
     public int getId() {
         return id;
     }
@@ -28,11 +32,8 @@ public class Copy {
         this.id = id;
     }
 
-    @OneToMany (targetEntity = Title.class,
-            mappedBy = "title",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
-    )
+    @ManyToOne()
+    @JoinColumn(name = "TITLE_ID")
     public int getTitleId() {
         return titleId;
     }
@@ -49,5 +50,15 @@ public class Copy {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "TITLE_ID")
+    public Title getTitle() {
+        return title;
+    }
+
+    public void setTitle(Title title) {
+        this.title = title;
     }
 }
