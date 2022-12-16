@@ -7,7 +7,6 @@ import javax.persistence.*;
 
 public class Copy {
     private int id;
-    private int copyId;
     private int titleId;
     private String status;
 
@@ -29,14 +28,11 @@ public class Copy {
         this.id = id;
     }
 
-    public int getCopyId() {
-        return copyId;
-    }
-
-    public void setCopyId(int copyId) {
-        this.copyId = copyId;
-    }
-
+    @OneToMany (targetEntity = Title.class,
+            mappedBy = "title",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
     public int getTitleId() {
         return titleId;
     }
@@ -45,6 +41,8 @@ public class Copy {
         this.titleId = titleId;
     }
 
+    @NotNull
+    @Column(name = "STATUS")
     public String getStatus() {
         return status;
     }
