@@ -1,4 +1,4 @@
-package com.crud.library.controller;
+package com.crud.library.domain.user;
 
 import com.crud.library.domain.user.UserDto;
 import org.springframework.web.bind.annotation.*;

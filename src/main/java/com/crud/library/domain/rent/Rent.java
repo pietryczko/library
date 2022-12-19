@@ -1,5 +1,6 @@
-package com.crud.library.domain;
+package com.crud.library.domain.rent;
 
+import com.crud.library.domain.copy.Copy;
 import com.crud.library.domain.user.User;
 import com.sun.istack.NotNull;
 

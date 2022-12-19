@@ -1,10 +1,9 @@
 package com.crud.library.domain.user;
 
-import com.crud.library.domain.Rent;
+import com.crud.library.domain.rent.Rent;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

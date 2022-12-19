@@ -1,6 +1,6 @@
-package com.crud.library.domain.dao;
+package com.crud.library.domain.title;
 
-import com.crud.library.domain.Copy;
+import com.crud.library.domain.title.Title;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,5 +8,5 @@ import javax.transaction.Transactional;
 
 @Transactional
 @Repository
-public interface CopyDao extends CrudRepository<Copy, Integer> {
+public interface TitleDao extends CrudRepository<Title, Integer> {
 }

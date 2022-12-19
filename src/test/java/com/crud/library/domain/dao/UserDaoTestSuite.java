@@ -1,6 +1,7 @@
 package com.crud.library.domain.dao;
 
 import com.crud.library.domain.user.User;
+import com.crud.library.domain.user.UserDao;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,5 +1,6 @@
-package com.crud.library.domain;
+package com.crud.library.domain.copy;
 
+import com.crud.library.domain.title.Title;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
