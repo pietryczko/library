@@ -1,5 +1,6 @@
 package com.crud.library.domain;
 
+import com.crud.library.domain.user.User;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
