@@ -1,6 +1,5 @@
 package com.crud.library.domain.user;
 
-import com.crud.library.domain.user.UserDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -23,7 +22,6 @@ public class UserController {
 
     @DeleteMapping
     public void deleteUser(int userId) {
-
     }
 
     @PutMapping
